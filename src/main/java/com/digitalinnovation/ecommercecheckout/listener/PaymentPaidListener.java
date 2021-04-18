@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class PaymentPaidListener {
 
-    private CheckoutRepository checkoutRepository;
+    private final CheckoutRepository checkoutRepository;
 
     @StreamListener(PaymentPaidSink.INPUT)
     public void handler(PaymentCreatedEvent event) {
